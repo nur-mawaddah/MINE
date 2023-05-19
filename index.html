@@ -1,0 +1,97 @@
+<html>
+<head>
+<link href="MULTIMEDIA/ASSEST/CSS/style.css" rel="stylesheet">
+
+<title> MULTIMEDIA </title>
+</head>
+<body>
+
+<hr color="black">
+<marquee direction="down"> 
+<h1> <center> THIS IS MARQUEE | WELCOME TO MY TUTORIAL </center> </h1> 
+</marquee>
+<hr color="black">
+
+<br>
+
+<center>
+<video controls width="720px" autoplay muted loop>
+<source src="MULTIMEDIA/ASSEST/VIDEO/Intro.mp4" type="video/mp4">
+</video>
+</center>
+
+<br><br>
+<hr color="black">
+<center> <b> INSERTING AUDIO </b> </center>
+<hr color="black">
+<br>
+
+<audio controls>
+<source src="MULTIMEDIA/ASSEST/AUDIO/music.mp3" type="audio/mpeg">
+</audio>
+
+<br><br>
+<hr color="black">
+<center> <b> EMBEDDING PDF FILE </b> </center>
+<hr color="black">
+<br>
+
+<center>
+<iframe src="MULTIMEDIA/ASSEST/PDF/KIDULT.pdf" width="50%" height="500px">
+</iframe>
+</center>
+
+<br><br>
+<hr color="black">
+<center> <b> EMBEDDING ANY FILE </b> </center>
+<hr color="black">
+<br>
+
+<center>
+<iframe src="https://www.youtube.com/embed/90H_KrlvMvo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen width="560" height="315">
+</iframe>
+</center>
+
+<br><br>
+<hr color="black">
+<center> <b> JAVA APPLET </b> </center>
+<hr color="black">
+<br>
+
+<div id="clock"> 8:10:45 </div>
+
+<script src="clock2.js"> </script>
+
+<script>
+setInterval(showTime, 1000);
+function showTime() {
+	let time = new Date();
+	let hour = time.getHours();
+	let min = time.getMinutes();
+	let sec = time.getSeconds();
+	am_pm = "AM";
+
+	if (hour > 12) {
+		hour -= 12;
+		am_pm = "PM";
+	}
+	if (hour == 0) {
+		hr = 12;
+		am_pm = "AM";
+	}
+
+	hour = hour < 10 ? "0" + hour : hour;
+	min = min < 10 ? "0" + min : min;
+	sec = sec < 10 ? "0" + sec : sec;
+
+	let currentTime = hour + ":"
+			+ min + ":" + sec + am_pm;
+
+	document.getElementById("clock")
+			.innerHTML = currentTime;
+}
+showTime();
+
+</script>
+</body>
+</html>
